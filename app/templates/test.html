@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form action="{% url 'test' %}" method="get">
+            <!-- {%csrf_token%} -->
+            <h1>UPLOAD</h1>
+            <h5>upload photos of ramcharan, nani, akhil, bramhanandam</h5>
+            <input type="file" id="file" name="photo" accept="image/*"><br><br>
+            <input type="submit">
+        </form><br><br><br>
+        {% if output is not None %}
+            <div id="out" style="font-weight: bold;">The output is {{ output }}</div>
+        {% endif %}
+    </center>
+</body>
+</html>
